@@ -11,7 +11,7 @@ const plans = [
   {
     name: "Starter",
     description: "Perfect for small businesses just starting out",
-    price: "300",
+    price: "299",
     features: [
       { text: "Single-page or Basic Multi-section Layout", highlight: true },
       { text: "Essential Design Elements", highlight: false },
@@ -20,7 +20,7 @@ const plans = [
       { text: "Contact Form Integration", highlight: false },
       { text: "2 Rounds of Revisions", highlight: false },
     ],
-    maintenancePrice: "30",
+    maintenancePrice: "29",
     maintenanceFeatures: [
       { text: "Security Updates", highlight: true },
       { text: "Performance Monitoring", highlight: false },
@@ -35,7 +35,7 @@ const plans = [
   {
     name: "Professional",
     description: "Ideal for growing businesses",
-    price: "500",
+    price: "499",
     features: [
       { text: "Up to 5-page Website", highlight: true },
       { text: "Custom Design Elements", highlight: true },
@@ -45,7 +45,7 @@ const plans = [
       { text: "Social Media Integration", highlight: true },
       { text: "3 Rounds of Revisions", highlight: false },
     ],
-    maintenancePrice: "50",
+    maintenancePrice: "49",
     maintenanceFeatures: [
       { text: "Regular Updates", highlight: true },
       { text: "Performance Optimization", highlight: true },
@@ -61,7 +61,7 @@ const plans = [
   {
     name: "Enterprise",
     description: "For established businesses needing premium solutions",
-    price: "800",
+    price: "799",
     features: [
       { text: "Up to 10-page Website", highlight: true },
       { text: "Premium Design & Animations", highlight: true },
@@ -72,7 +72,7 @@ const plans = [
       { text: "Unlimited Revisions", highlight: false },
       { text: "Priority Support", highlight: true },
     ],
-    maintenancePrice: "80",
+    maintenancePrice: "79",
     maintenanceFeatures: [
       { text: "Comprehensive Maintenance", highlight: true },
       { text: "Advanced Updates", highlight: true },
