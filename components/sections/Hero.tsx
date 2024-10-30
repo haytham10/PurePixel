@@ -134,7 +134,17 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="relative z-10">
+            <motion.div 
+              className="relative z-10"
+              animate={{
+                y: [0, -15, 0],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
               <Image
                 src="/hero.png"
                 alt="Digital Dreams"
@@ -143,7 +153,7 @@ const Hero = () => {
                 className="rounded-lg shadow-2xl"
                 priority
               />
-            </div>
+            </motion.div>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg blur-3xl"
               animate={{
@@ -153,6 +163,7 @@ const Hero = () => {
               transition={{
                 duration: 4,
                 repeat: Infinity,
+                ease: "easeInOut"
               }}
             />
           </motion.div>

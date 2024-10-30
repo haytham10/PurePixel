@@ -1,10 +1,10 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Camera } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
+import Image from "next/image"
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -40,10 +40,13 @@ const Header = () => {
           transition={{ duration: 0.5 }}
         >
           <Link href="/" className="flex items-center space-x-2">
-            <Camera className="h-6 w-6 text-purple-500" />
-            <span className="text-xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-              PurePixel
-            </span>
+            <Image
+              src="/purepixel.png"
+              alt="Logo"
+              width={120}
+              height={90}
+            />
+
           </Link>
         </motion.div>
 
