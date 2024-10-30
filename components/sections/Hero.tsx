@@ -4,98 +4,161 @@ import React from 'react'
 import { motion } from "framer-motion"
 import { Button } from '../ui/button'
 import Image from "next/image"
-
+import { ArrowRight, Sparkles, Star } from "lucide-react"
 
 const Hero = () => {
+  // Create an array of particle positions
+  const particles = React.useMemo(() => 
+    [...Array(20)].map(() => ({
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      duration: 2 + Math.random() * 4
+    })), []
+  )
+
   return (
-	<section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-pink-50">
-	<div className="container relative py-24">
-	  <div className="grid gap-12 lg:grid-cols-2">
-		<motion.div 
-		  className="space-y-6"
-		  initial={{ opacity: 0, x: -20 }}
-		  animate={{ opacity: 1, x: 0 }}
-		  transition={{ duration: 0.5 }}
-		>
-		  <div className="flex items-center space-x-3 mb-8">
-			<div className="flex items-center space-x-2 rounded-full bg-black/10 px-3 py-1 backdrop-blur-sm">
-			  <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-			  <span className="text-sm font-medium">356 Clients</span>
-			</div>
-		  </div>
-		  <h1 className="text-5xl font-bold tracking-tight text-purple-500">
-			Transform Your Digital Presence with Pixel-Perfect Design
-		  </h1>
-		  <p className="text-xl text-muted-foreground">
-			From concept to code, we craft stunning websites that captivate your audience and drive results. Experience design excellence that sets you apart.
-		  </p>
-		  <div className="space-y-8">
-			<Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:opacity-90 px-8">
-			  Get Started
-			</Button>
-			<div className="flex items-center space-x-4 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 p-4 backdrop-blur-sm">
-			  <div className="flex -space-x-2">
-				<Image
-				  src="/placeholder.svg?height=40&width=40"
-				  alt="Review Avatar"
-				  width={40}
-				  height={40}
-				  className="rounded-full border-2 border-white"
-				/>
-				<Image
-				  src="/placeholder.svg?height=40&width=40"
-				  alt="Review Avatar"
-				  width={40}
-				  height={40}
-				  className="rounded-full border-2 border-white"
-				/>
-				<Image
-				  src="/placeholder.svg?height=40&width=40"
-				  alt="Review Avatar"
-				  width={40}
-				  height={40}
-				  className="rounded-full border-2 border-white"
-				/>
-			  </div>
-			  <div>
-				<div className="flex text-yellow-400">
-				  <svg className="h-5 w-5 fill-current" viewBox="0 0 20 20">
-					<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-				  </svg>
-				  <svg className="h-5 w-5 fill-current" viewBox="0 0 20 20">
-					<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-				  </svg>
-				  <svg className="h-5 w-5 fill-current" viewBox="0 0 20 20">
-					<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-				  </svg>
-				  <svg className="h-5 w-5 fill-current" viewBox="0 0 20 20">
-					<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-				  </svg>
-				  <svg className="h-5 w-5 fill-current" viewBox="0 0 20 20">
-					<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-				  </svg>
-				</div>
-				<p className="text-sm font-medium">50k+ Satisfied Customers</p>
-			  </div>
-			</div>
-		  </div>
-		</motion.div>
-		<motion.div
-		  initial={{ opacity: 0, x: 20 }}
-		  animate={{ opacity: 1, x: 0 }}
-		  transition={{ duration: 0.5 }}
-		>
-		  <Image
-			src="/placeholder.svg?height=600&width=800"
-			alt="Dashboard Preview"
-			width={800}
-			height={600}
-			className="rounded-lg shadow-2xl"
-		  />
-		</motion.div>
-	  </div>
-	</div>
-  </section>
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-purple-50 via-white to-pink-50 pt-20 md:pt-0">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {particles.map((particle, i) => (
+          <motion.div
+            key={i}
+            className="absolute h-2 w-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-400"
+            style={{
+              left: `${particle.x}%`,
+              top: `${particle.y}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              x: [0, 30, 0],
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.8, 0.3],
+            }}
+            transition={{
+              duration: particle.duration,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="container relative px-4 md:px-6 pb-12 md:pb-24">
+        <motion.div 
+          className="flex justify-center mb-8 md:mb-16"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <div className="inline-flex items-center space-x-2 rounded-full bg-white/80 px-3 py-1.5 md:px-4 md:py-2 shadow-lg backdrop-blur-sm">
+            <Sparkles className="h-3 w-3 md:h-4 md:w-4 text-yellow-500" />
+            <span className="text-xs md:text-sm font-medium bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              Crafting Digital Magic
+            </span>
+          </div>
+        </motion.div>
+
+        <div className="grid gap-8 md:gap-12 lg:grid-cols-2">
+          <motion.div 
+            className="space-y-6 md:space-y-8 text-center lg:text-left"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.h1 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              We Turn Your 
+              <span className="block mt-1 md:mt-2 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Digital Dreams
+              </span>
+              Into Reality
+            </motion.h1>
+
+            <motion.p 
+              className="text-lg md:text-xl text-muted-foreground"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+            >
+              Where innovation meets elegance. We create stunning digital experiences that leave lasting impressions.
+            </motion.p>
+
+            <motion.div 
+              className="flex flex-col space-y-6 md:space-y-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+            >
+              <div className="flex justify-center lg:justify-start">
+                <Button size="lg" className="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:scale-105 transition-transform duration-300 px-6 md:px-8 w-fit text-sm md:text-base">
+                  Start Your Journey
+                  <motion.div
+                    className="ml-2"
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ repeat: Infinity, duration: 1.5 }}
+                  >
+                    <ArrowRight className="h-4 w-4" />
+                  </motion.div>
+                </Button>
+              </div>
+
+              <div className="flex items-center space-x-3 justify-center lg:justify-start">
+                <div className="flex space-x-0">
+                  {[...Array(5)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, scale: 0 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.6 + (i * 0.1) }}
+                      className="flex items-center justify-center"
+                    >
+                      <Star 
+                        className="h-4 w-4 md:h-5 md:w-5 text-yellow-400 fill-yellow-400"
+                        strokeWidth={1}
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+                <span className="text-xs md:text-sm font-medium">Trusted by 500+ clients</span>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            className="relative mt-8 md:mt-0"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <div className="relative z-10">
+              <Image
+                src="/hero.png"
+                alt="Digital Dreams"
+                width={800}
+                height={600}
+                className="rounded-lg shadow-2xl"
+                priority
+              />
+            </div>
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg blur-3xl"
+              animate={{
+                scale: [1, 1.1, 1],
+                opacity: [0.3, 0.5, 0.3],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+              }}
+            />
+          </motion.div>
+        </div>
+      </div>
+    </section>
   )
 }
 
