@@ -71,21 +71,30 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              We Turn Your 
+              We Turn 
               <span className="block mt-1 md:mt-2 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Digital Dreams
+                Your Dreams
               </span>
               Into Reality
             </motion.h1>
 
-            <motion.p 
-              className="text-lg md:text-xl text-muted-foreground"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-            >
-              Where innovation meets elegance. We create stunning digital experiences that leave lasting impressions.
-            </motion.p>
+            <div className='space-y-2 text-lg md:text-xl text-muted-foreground whitespace-wrap'>
+				<motion.p 
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ delay: 0.4 }}
+				>
+				Where innovation and elegance come together
+				</motion.p>
+
+				<motion.p 
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ delay: 0.4 }}
+				>
+				We craft unforgettable digital experiences
+				</motion.p>
+			</div>
 
             <motion.div 
               className="flex flex-col space-y-6 md:space-y-8"
