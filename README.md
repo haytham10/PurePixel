@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PurePixel
 
-## Getting Started
+PurePixel is a premier web design and development agency dedicated to creating stunning and functional websites for businesses of all sizes.
 
-First, run the development server:
+## Services
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Web Design**: Crafting visually appealing and user-friendly website designs.
+- **Web Development**: Building robust and scalable websites using the latest technologies.
+- **E-commerce Solutions**: Developing custom e-commerce platforms to boost your online sales.
+- **SEO Optimization**: Enhancing your website's visibility on search engines.
+- **Maintenance and Support**: Providing ongoing support and maintenance to ensure your website runs smoothly.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Our Mission
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+At PurePixel, our mission is to help businesses establish a strong online presence through innovative design and cutting-edge technology. We strive to deliver high-quality solutions that meet our clients' unique needs and exceed their expectations.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contact Us
 
-## Learn More
+For inquiries or to get a quote, please contact us at:
 
-To learn more about Next.js, take a look at the following resources:
+- **Email**: [info@purepixel.com](mailto:info@purepixel.com)
+- **Phone**: (123) 456-7890
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Visit our website: [www.purepixel.com](https://purepixel.vercel.app/)
