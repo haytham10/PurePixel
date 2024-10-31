@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import { ThemeProvider } from "@/providers/ThemeProvider"
 import { geistSans, geistMono } from "@/lib/fonts"
 import "./globals.css"
+import Header from "@/components/layout/Header"
+import Footer from "@/components/layout/Footer"
 
 export const metadata: Metadata = {
   title: "PurePixel - Web Design & Development",
@@ -40,8 +42,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-        </ThemeProvider>
+			<Header />
+				{children}
+			<Footer />
+		</ThemeProvider>
       </body>
     </html>
   )

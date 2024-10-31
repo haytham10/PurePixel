@@ -14,7 +14,6 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col pt-20">
-      <Header />
       <main>
         <Hero />
         <Features />
@@ -24,7 +23,6 @@ export default function Home() {
         <Testimonial />
         <FAQ />
       </main>
-      <Footer />
     </div>
   )
 }

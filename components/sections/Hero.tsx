@@ -103,7 +103,7 @@ const Hero = () => {
               transition={{ delay: 0.5 }}
             >
               <div className="flex justify-center lg:justify-start">
-                <Button size="lg" className="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:scale-105 transition-transform duration-300 px-6 md:px-8 w-fit text-sm md:text-base">
+                <Button size="lg" className="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:scale-105 transition-transform duration-300 px-6 md:px-8 w-fit text-sm md:text-base" onClick={() => window.location.href='/contact'}>
                   Start Your Journey
                   <motion.div
                     className="ml-2"
