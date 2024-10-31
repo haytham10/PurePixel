@@ -71,9 +71,9 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              We Turn 
+              We Turn  
               <span className="block mt-1 md:mt-2 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Your Dreams
+                Your Dreams 
               </span>
               Into Reality
             </motion.h1>
