@@ -6,22 +6,25 @@ import { fadeIn, stagger } from '@/lib/animations';
 import Image from 'next/image';
 
 const features = [
-	{
-	  title: "Magic in Every Pixel",
-	  description: "We craft pixel-perfect designs that captivate and convert. Your vision, our expertise.",
-	  gradient: "from-violet-100 to-purple-50",
-	},
-	{
-	  title: "Brand Brilliance",
-	  description: "Transform your identity into a visual masterpiece that speaks volumes.",
-	  gradient: "from-pink-100 to-rose-50",
-	},
-	{
-	  title: "Growth Catalyst",
-	  description: "Skyrocket your online presence with our data-driven SEO strategies.",
-	  gradient: "from-purple-100 to-pink-50",
-	}
-  ]
+  {
+    title: "Custom Web Development",
+    description: "We build scalable and robust web applications tailored to your business needs, leveraging the latest technologies.",
+    gradient: "from-indigo-100 to-blue-50",
+    image: "/stock/web-development.jpg",
+  },
+  {
+    title: "Brand Identity & Strategy",
+    description: "Create a compelling brand identity that resonates with your audience and sets you apart from the competition.",
+    gradient: "from-green-100 to-teal-50",
+    image: "/stock/brand-identity.jpg",
+  },
+  {
+    title: "Digital Marketing Solutions",
+    description: "Boost your online presence with our data-driven SEO and marketing strategies that deliver measurable results.",
+    gradient: "from-yellow-100 to-orange-50",
+    image: "/stock/digital-marketing.jpg",
+  },
+]
 
 const Features = () => {
   return (
@@ -46,7 +49,7 @@ const Features = () => {
         {features.map((feature, index) => (
           <motion.div
             key={feature.title}
-            className={`rounded-xl bg-gradient-to-br ${feature.gradient} p-8 hover:scale-105 transition-transform duration-300 overflow-hidden`}
+            className={`rounded-xl bg-gradient-to-br ${feature.gradient} p-8 hover:scale-105 transition-transform duration-300 overflow-hidden shadow-lg`}
             variants={{
               initial: { opacity: 0, y: 20 },
               animate: { 
@@ -56,18 +59,18 @@ const Features = () => {
               }
             }}
           >
-            <div className="relative mb-6 aspect-video rounded-lg overflow-hidden">
+            <div className="relative mb-6 h-48 w-full rounded-lg overflow-hidden">
               <Image
-                src={`/features/${index + 1}.png`} // You'll need to generate and save the images
+                src={feature.image}
                 alt={feature.title}
-                fill
-                className="object-cover"
+                layout="fill"
+                objectFit="cover"
               />
             </div>
-            <h3 className="mb-2 text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <h3 className="mb-2 text-xl font-bold text-gray-800">
               {feature.title}
             </h3>
-            <p className="text-muted-foreground">
+            <p className="text-gray-600">
               {feature.description}
             </p>
           </motion.div>
